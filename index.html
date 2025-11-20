@@ -40,55 +40,6 @@
         font-family: 'Zilla Slab', serif;
       }
 
-      /* The tech/security interlocking look */
-      .clip-tab-bottom {
-        /* Creates a tab sticking down in the center */
-        clip-path: polygon(
-          0 0, 
-          100% 0, 
-          100% 90%, 
-          53% 90%, 
-          50% 100%, 
-          47% 90%, 
-          0 90%
-        );
-      }
-      
-      @media (max-width: 768px) {
-        .clip-tab-bottom {
-          clip-path: polygon(
-            0 0, 
-            100% 0, 
-            100% 95%, 
-            55% 95%, 
-            50% 100%, 
-            45% 95%, 
-            0 95%
-          );
-        }
-      }
-
-      /* The tech/security cut-corner look */
-      .clip-chamfer-top {
-        clip-path: polygon(0 20px, 20px 0, 100% 0, 100% 100%, 0 100%);
-      }
-
-      /* The "Shoulder" shape for the partners section */
-      .clip-partners-top {
-        clip-path: polygon(
-          0 100%, 
-          0 20px, 
-          10% 0, 
-          90% 0, 
-          100% 20px, 
-          100% 100%
-        );
-      }
-      
-      .clip-image-angle {
-         clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%, 0% 10%);
-      }
-      
       /* Hide scrollbar for cleaner reveal animations */
       ::-webkit-scrollbar {
         width: 8px;
@@ -106,17 +57,20 @@
   <script type="importmap">
 {
   "imports": {
+    "vite": "https://aistudiocdn.com/vite@^7.2.4",
+    "@vitejs/plugin-react": "https://aistudiocdn.com/@vitejs/plugin-react@^5.1.1",
     "react/": "https://aistudiocdn.com/react@^19.2.0/",
     "react": "https://aistudiocdn.com/react@^19.2.0",
     "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
-    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
     "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
-    "framer-motion": "https://aistudiocdn.com/framer-motion@^11.0.24"
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^12.23.24"
   }
 }
 </script>
 </head>
   <body>
     <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
   </body>
 </html>

@@ -8,31 +8,24 @@ import { Project, Page } from '../types';
 const HERO_SLIDES = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=1600&auto=format&fit=crop", // Uniformed Security Guard
-    title: "Agents Qualifiés",
-    subtitle: "Protection Humaine",
-    description: "Des agents de sécurité certifiés CNAPS pour le contrôle d'accès et la protection de vos sites."
+    image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?q=80&w=1600&auto=format&fit=crop", // Tech/CCTV
+    title: "Installation Technique",
+    subtitle: "Systèmes de Pointe",
+    description: "Déploiement de réseaux de vidéosurveillance 4K et de contrôle d'accès biométrique."
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1588413322880-44117878e85c?q=80&w=1600&auto=format&fit=crop", // K9 Dog Focus
-    title: "Unités Cynophiles",
-    subtitle: "Protection K9 Active",
-    description: "Binômes maître-chien certifiés pour une dissuasion et une détection accrues sur site."
+    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1600&auto=format&fit=crop", // Corporate Window
+    title: "Sérénité Corporate",
+    subtitle: "Protection des Biens",
+    description: "Une surveillance discrète et efficace pour vos bureaux et sièges sociaux."
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1590178997917-7294d79e8687?q=80&w=1600&auto=format&fit=crop", // Control Room Screens
-    title: "Hypervision 24/7",
-    subtitle: "Centre de Contrôle",
-    description: "Surveillance à distance et levée de doute vidéo immédiate par nos opérateurs."
-  },
-  {
-    id: 4,
-    image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=1600&auto=format&fit=crop", // Night Patrol Car
-    title: "Intervention Mobile",
-    subtitle: "Rondes de Nuit",
-    description: "Patrouilles aléatoires et intervention rapide sur alarme pour sécuriser vos périmètres."
+    image: "https://images.unsplash.com/photo-1622035815120-b1a5e1e2795c?q=80&w=1600&auto=format&fit=crop", // Guard Luxury
+    title: "Agents Qualifiés",
+    subtitle: "Protection Humaine",
+    description: "Des agents de sécurité certifiés pour le contrôle et l'accueil sur vos sites de prestige."
   }
 ];
 
@@ -90,8 +83,8 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
 
   return (
     <PageTransition>
-      {/* HERO SECTION - Burgundy - Technical Bottom Edge */}
-      <header className="relative min-h-[95vh] bg-burgundy flex flex-col justify-center overflow-hidden pt-20 z-30 clip-tab-bottom">
+      {/* HERO SECTION - Burgundy */}
+      <header className="relative min-h-[95vh] bg-burgundy flex flex-col justify-center overflow-hidden pt-20 z-30">
         
         {/* Background Carousel */}
         <div className="absolute inset-0 z-0">
@@ -107,7 +100,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                     <img 
                         src={HERO_SLIDES[currentSlide].image} 
                         alt="Security Background" 
-                        className="w-full h-full object-cover opacity-30"
+                        className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-r from-burgundy via-burgundy/80 to-burgundy/40"></div>
                     <div className="absolute inset-0 bg-gradient-to-t from-burgundy via-transparent to-transparent"></div>
@@ -238,7 +231,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
             </div>
         </div>
 
-        {/* HERO ARROW - ENHANCED */}
+        {/* HERO ARROW */}
         <motion.div 
             style={{ opacity: arrowOpacity }}
             className="absolute bottom-16 left-0 right-0 z-40 flex justify-center pointer-events-none"
@@ -254,17 +247,10 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                 </div>
             </motion.div>
         </motion.div>
-
-        {/* Unique Bottom Border SVG - Technical Jaw */}
-        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20">
-             <svg className="relative block w-[calc(100%+1.3px)] h-[60px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z" className="fill-cream"></path>
-            </svg>
-        </div>
       </header>
 
-      {/* STATS SECTION - Cream Background - Interlocking Top */}
-      <section className="bg-cream py-24 relative z-20 -mt-2 pt-24">
+      {/* STATS SECTION - Cream Background */}
+      <section className="bg-cream py-24 relative z-20">
            <div className="max-w-[1600px] mx-auto px-6 md:px-12">
                 <StaggerContainer className="grid md:grid-cols-3 gap-12 relative">
                      {/* Stat 1 */}
@@ -303,13 +289,27 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                      </StaggerItem>
                 </StaggerContainer>
            </div>
-           
-           {/* Diagonal Slash Divider */}
-           <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
-                <svg className="relative block w-[calc(100%+1.3px)] h-[80px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" className="fill-burgundy"></path>
-                </svg>
-           </div>
+      </section>
+
+      {/* COLLABORATORS & PARTNERS SECTION */}
+      <section className="bg-cream py-12 border-t border-burgundy/5">
+            <div className="max-w-[1600px] mx-auto px-6 md:px-12 mb-10 text-center">
+                 <h4 className="text-burgundy/40 font-bold uppercase tracking-widest text-xs">Collaborateurs & Partenaires</h4>
+            </div>
+            <div className="flex overflow-hidden relative">
+                <motion.div 
+                    animate={{ x: ["0%", "-50%"] }}
+                    transition={{ repeat: Infinity, ease: "linear", duration: 40 }}
+                    className="flex gap-24 whitespace-nowrap opacity-50"
+                >
+                    {[...TRUST_LOGOS, ...TRUST_LOGOS, ...TRUST_LOGOS].map((client, i) => (
+                        <div key={i} className="flex items-center gap-3 grayscale hover:grayscale-0 transition-all duration-500 cursor-default">
+                            <client.Icon className="w-8 h-8 text-burgundy" />
+                            <span className="text-lg font-bold text-burgundy tracking-widest uppercase">{client.name}</span>
+                        </div>
+                    ))}
+                </motion.div>
+            </div>
       </section>
 
       {/* SAFEGUARDING BANNER - Burgundy (Dark) */}
@@ -321,13 +321,6 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                     </h3>
                 </RevealText>
            </div>
-           
-           {/* Curved Rise Divider */}
-            <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
-                <svg className="relative block w-[calc(100%+1.3px)] h-[70px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" className="fill-cream"></path>
-                </svg>
-           </div>
       </section>
 
       {/* EXPERTS SECTION - Cream (Light) */}
@@ -338,9 +331,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                     <p className="text-spymac-red font-bold uppercase tracking-widest mb-3 flex items-center gap-2 text-xs">
                         <Shield className="w-4 h-4" /> Nos Experts
                     </p>
-                    {/* ENHANCED TITLE WITH ICON */}
                     <div className="flex items-center gap-4">
-                        <Award className="w-12 h-12 text-burgundy/20 hidden md:block" />
                         <h2 className="text-4xl md:text-5xl font-serif font-bold text-burgundy">UNITÉS D'ÉLITE</h2>
                     </div>
                 </div>
@@ -437,15 +428,6 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                  </StaggerItem>
              </StaggerContainer>
         </div>
-        
-        {/* Digital Step Divider */}
-        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
-             <svg className="relative block w-[calc(100%+1.3px)] h-[50px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25" className="fill-burgundy"></path>
-                <path d="M0,0V15.81C13,36.92,47.64,50.79,90.5,57.3c83.5,12.7,188.2-2.8,278.4-24,72.1-17,142.3-15.6,212.1,1.4,89.4,21.7,179.3,62,283.4,45.7,60.4-9.4,110.3-33.4,163-58V0Z" opacity=".5" className="fill-burgundy"></path>
-                <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" className="fill-burgundy"></path>
-            </svg>
-        </div>
       </section>
 
       {/* PROCESS SECTION - Burgundy (Dark) */}
@@ -453,12 +435,10 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
            <div className="max-w-[1600px] mx-auto relative z-10">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-20">
                     <div>
-                        {/* ENHANCED TITLE WITH ICON */}
                         <div className="flex items-center gap-4">
-                            <Activity className="w-12 h-12 text-spymac-red hidden md:block" />
                             <h2 className="text-4xl md:text-6xl font-serif font-bold text-white mb-2">LE PROCESSUS</h2>
                         </div>
-                        <p className="text-white/50 max-w-md pl-16">Une méthodologie rigoureuse pour une protection sans faille.</p>
+                        <p className="text-white/50 max-w-md pl-1">Une méthodologie rigoureuse pour une protection sans faille.</p>
                     </div>
                     <div className="hidden md:block h-px w-64 bg-white/10 mb-4"></div>
                 </div>
@@ -480,31 +460,6 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                     ))}
                 </StaggerContainer>
            </div>
-
-           {/* TRUST STRIP - Integrated at bottom of Dark section */}
-           <div className="mt-24 pt-12 border-t border-white/5">
-                <div className="flex overflow-hidden relative">
-                    <motion.div 
-                        animate={{ x: ["0%", "-50%"] }}
-                        transition={{ repeat: Infinity, ease: "linear", duration: 40 }}
-                        className="flex gap-24 whitespace-nowrap opacity-30"
-                    >
-                        {[...TRUST_LOGOS, ...TRUST_LOGOS, ...TRUST_LOGOS].map((client, i) => (
-                            <div key={i} className="flex items-center gap-3 grayscale">
-                                <client.Icon className="w-6 h-6 text-white" />
-                                <span className="text-sm font-bold text-white tracking-widest uppercase">{client.name}</span>
-                            </div>
-                        ))}
-                    </motion.div>
-                </div>
-             </div>
-             
-             {/* Wave Divider */}
-             <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
-                <svg className="relative block w-[calc(100%+1.3px)] h-[70px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" className="fill-cream"></path>
-                </svg>
-           </div>
       </section>
 
       {/* PROJECTS - Cream (Light) */}
@@ -512,9 +467,7 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
         <div className="max-w-[1600px] mx-auto relative z-10">
            <div className="flex justify-between items-end mb-12">
                 <div>
-                     {/* ENHANCED TITLE WITH ICON */}
                      <div className="flex items-center gap-4">
-                        <Target className="w-12 h-12 text-burgundy/20 hidden md:block" />
                         <h2 className="text-5xl md:text-7xl font-serif font-bold text-burgundy mb-4">NOS MISSIONS</h2>
                      </div>
                 </div>
@@ -540,24 +493,14 @@ const Home: React.FC<HomeProps> = ({ onNavigate }) => {
                 ))}
            </StaggerContainer>
         </div>
-        
-        {/* Triangle Arrow Divider */}
-        <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none">
-            <svg className="relative block w-[calc(100%+1.3px)] h-[60px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" className="fill-burgundy"></path>
-            </svg>
-        </div>
       </section>
 
       {/* MASSIVE CTA - Burgundy (Dark) */}
       <section className="bg-burgundy py-32 px-6 text-center relative overflow-hidden">
            <div className="relative z-10 max-w-4xl mx-auto pt-10">
                <ScaleIn>
-                    {/* ENHANCED TITLE WITH ICON */}
                     <div className="flex items-center justify-center gap-6 mb-6">
-                        <ShieldCheck className="w-16 h-16 text-spymac-red" />
                         <h2 className="text-5xl md:text-8xl font-serif font-bold text-cream">SÉCURITÉ ABSOLUE</h2>
-                        <ShieldCheck className="w-16 h-16 text-spymac-red" />
                     </div>
                </ScaleIn>
                <p className="text-white/60 text-xl mb-12 max-w-2xl mx-auto font-light">Nos experts sont prêts à intervenir. Réponse garantie sous 2 heures.</p>

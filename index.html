@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Minan Sécurité - Excellence & Protection</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Zilla Slab', 'serif'],
+            },
+            colors: {
+              burgundy: '#220303', // PDF Dark Background
+              'burgundy-light': '#2a0404',
+              cream: '#F5F2E8',    // PDF Light Background
+              'spymac-red': '#9F1111', // Darker, more elegant red (Ruby)
+              'spymac-dark-red': '#600a0a',
+            },
+            backgroundImage: {
+              'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+            }
+          },
+        },
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Zilla+Slab:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background-color: #220303;
+        color: #F5F2E8;
+        font-family: 'Inter', sans-serif;
+        overflow-x: hidden;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Zilla Slab', serif;
+      }
+
+      /* The tech/security interlocking look */
+      .clip-tab-bottom {
+        /* Creates a tab sticking down in the center */
+        clip-path: polygon(
+          0 0, 
+          100% 0, 
+          100% 90%, 
+          53% 90%, 
+          50% 100%, 
+          47% 90%, 
+          0 90%
+        );
+      }
+      
+      @media (max-width: 768px) {
+        .clip-tab-bottom {
+          clip-path: polygon(
+            0 0, 
+            100% 0, 
+            100% 95%, 
+            55% 95%, 
+            50% 100%, 
+            45% 95%, 
+            0 95%
+          );
+        }
+      }
+
+      /* The tech/security cut-corner look */
+      .clip-chamfer-top {
+        clip-path: polygon(0 20px, 20px 0, 100% 0, 100% 100%, 0 100%);
+      }
+
+      /* The "Shoulder" shape for the partners section */
+      .clip-partners-top {
+        clip-path: polygon(
+          0 100%, 
+          0 20px, 
+          10% 0, 
+          90% 0, 
+          100% 20px, 
+          100% 100%
+        );
+      }
+      
+      .clip-image-angle {
+         clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%, 0% 10%);
+      }
+      
+      /* Hide scrollbar for cleaner reveal animations */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #220303; 
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #3E0606; 
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #9F1111; 
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.0/",
+    "react": "https://aistudiocdn.com/react@^19.2.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.0/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.30.0",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.554.0",
+    "framer-motion": "https://aistudiocdn.com/framer-motion@^11.0.24"
+  }
+}
+</script>
+</head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

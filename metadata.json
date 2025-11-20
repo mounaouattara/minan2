@@ -1,0 +1,5 @@
+{
+  "name": "MindFlip",
+  "description": "An interactive, AI-powered inspiration gallery featuring 3D flipping cards. Generate custom visuals and stories using Gemini 2.5 Flash and Flash-Image.",
+  "requestFramePermissions": []
+}
